@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link
+      rel="shortcut icon"
+      href="https://th.bing.com/th/id/OIP.kwE8IapDUTtylieeRnn2YAHaHa?pid=ImgDet&rs=1"
+      type="image/x-icon"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Registration Successful</title>
+  </head>
+  <body class="background-radial-gradient">
+    <style>
+      body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    font-family: Arial, sans-serif;
+}
+
+.background-radial-gradient {
+    background-color: hsl(219, 43%, 17%);
+    background-image: radial-gradient(
+        800px circle at 25% 25%,
+        hsl(218, 41%, 45%) 15%,
+        hsl(218, 41%, 35%) 35%,
+        hsl(218, 41%, 25%) 55%,
+        hsl(218, 41%, 20%) 75%,
+        transparent 100%
+    ),
+    radial-gradient(
+        1200px circle at 75% 75%,
+        hsl(218, 41%, 40%) 15%,
+        hsl(218, 41%, 30%) 35%,
+        hsl(218, 41%, 20%) 55%,
+        hsl(218, 41%, 15%) 75%,
+        transparent 100%
+    );
+    position: relative;
+}
+
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+#radius-shape-1, #radius-shape-2 {
+    position: absolute;
+    background: radial-gradient(circle, #44006b, #ad1fff);
+    animation: pulse 8s infinite ease-in-out, float 6s infinite ease-in-out;
+    opacity: 0.9;
+}
+
+#radius-shape-1 {
+    height: 250px;
+    width: 250px;
+    top: 100px;
+    left: 50px;
+    border-radius: 50%;
+}
+
+#radius-shape-2 {
+    border-radius: 50%;
+    bottom: 50px;
+    right: 100px;
+    width: 300px;
+    height: 300px;
+}
+
+#moving-gradient {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(45deg, rgba(255,255,255,0.1), rgba(255,255,255,0));
+    animation: gradientShift 10s infinite ease-in-out;
+}
+
+@keyframes gradientShift {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+      /* Apply glassmorphism effect to the container */
+      .container {
+        background: rgba(255, 255, 255, 0.823); /* Set a semi-transparent white background */
+        backdrop-filter: blur(10px); /* Apply a blur effect to the background */
+        border-radius:15px; /* Rounded corners */
+        padding: 30px;
+        text-align: center;
+      }
+
+      /* Center the container vertically and horizontally */
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh; /* Ensure full viewport height */
+        background-color: rgb(233, 233, 233);
+      }
+    </style>
+    <div
+    id="radius-shape-1"
+    class="position-absolute rounded-circle shadow-5-strong"
+  ></div>
+  <div id="radius-shape-2" class="position-absolute shadow-5-strong"></div>
+    <div class="container">
+      <h1>Registration Successful</h1>
+      <p>Thank you for registering.</p>
+    </div>
+  </body>
+</html>
